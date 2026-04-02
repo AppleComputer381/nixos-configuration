@@ -1,7 +1,7 @@
 {config, pkgs, ...}: 
 
 {
-    users.users.emilienb = {
+    users.users.monuser = {
         isNormalUser = true;
         extraGroups = [ "wheel"
         "networkmanager"
@@ -11,8 +11,7 @@
         "docker"
       ];
 
-      openssh.enable = true;
-      
+         
     
         
     };

@@ -28,7 +28,7 @@
      waybar
      dunst
      libnotify
-     rofi-wayland
+     rofi
      swww
      networkmanagerapplet 
 
@@ -41,11 +41,10 @@
      
     ];
 
-    fonts.packages = with pkgs;
-    [
-      nerdfonts
+    fonts.packages = with pkgs;[
+      nerd-fonts.fira-code
       noto-fonts
-      noto-fonts-cjk
-      noto-fonts-emoji
+      noto-fonts-cjk-sans
+      noto-fonts-color-emoji
     ];
 }

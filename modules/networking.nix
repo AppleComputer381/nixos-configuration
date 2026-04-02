@@ -6,7 +6,9 @@
     networking.networkmanager.enable = true;
     services.openssh = {
       enable = true;
-      settings.PasswordAuthentication = true;
+      settings = {
       PermitRootLogin = "no";
-    }
+      PasswordAuthentication = true;
+      };    
+};
 }

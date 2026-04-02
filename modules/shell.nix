@@ -16,9 +16,9 @@
         "extract"
       ];
       theme = "";
-    }
+    };
 
-    promptInit = builtins.readFile ./neo.zsh-theme;
+    promptInit = builtins.readFile ./neo.zsh-theme/neo.zsh-theme;
     shellAliases = {
     ll = "ls -l";
     update = "sudo nixos-rebuild switch"; 

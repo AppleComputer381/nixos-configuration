@@ -2,6 +2,9 @@
 
 {
     nixpkgs.config.allowUnfree = true;
+    nixpkgs.config.permittedInsecurePackages = [
+      "openssl-1.1.1w"
+    ];
     environment.systemPackages = with pkgs;
     [
       #Outils systeme
@@ -15,7 +18,10 @@
       pciutils
       usbutils
       sublime4
-
+      swww
+      grim
+      slurp
+      wl-clipboard
       #commadlines
       kubectl
       kubernetes-helm
@@ -28,5 +34,5 @@
       vlc
       nautilus
       
-    ]
+    ];
 }
