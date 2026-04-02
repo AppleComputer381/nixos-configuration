@@ -16,6 +16,13 @@
       usbutils
       sublime4
 
+      #commadlines
+      kubectl
+      kubernetes-helm
+      docker
+      docker-compose
+
+
       #Applications utilitaires
       firefox
       vlc
