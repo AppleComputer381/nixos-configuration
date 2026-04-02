@@ -22,6 +22,7 @@
       grim
       slurp
       wl-clipboard
+      github-cli
       #commadlines
       kubectl
       kubernetes-helm
