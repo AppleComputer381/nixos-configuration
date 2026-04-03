@@ -3,6 +3,7 @@
 {
     users.users.emilienb = {
         isNormalUser = true;
+	initialPassword = "changeme";
         extraGroups = [ 
         "wheel"
         "networkmanager"

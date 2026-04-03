@@ -8,6 +8,6 @@
         python3
         python312Packages.ipython
         python312Packages.pip
-        python312Packages.venv
+        python312Packages.envs
     ];    
 }

@@ -18,7 +18,7 @@
     enable = false;
     settings = {
       background = {
-        path = "./config/wallpapers/wallpaper.jpg"; 
+        path = toString ./config/wallpapers/wallpaper.jpg; 
         fit = "Cover";
       };
       appearance = {
@@ -51,8 +51,9 @@
     qt.style = "gtk2";
 
     # Symlink automatique de hyprland.conf vers ~/.config/hypr/
-    systemd.tmpfiles.rules = [
-      "d /home/emilienb/.config/hypr 0755 emilienb users -"
-      "L+ /home/emilienb/.config/hypr/hyprland.conf - - - - ${./config/hyprland.conf}"
-    ];
+    system.activationScripts.hyprlandConfig=''
+	mkdir -p /home/emilienb/.config/hypr
+	cp ${./config/hyprland.conf} /home/emilienb/.config/hypr/hyprland.conf
+	chown emilienb:users /home/emilienb/.config/hypr/hyprland.conf
+	'';
 }

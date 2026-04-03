@@ -21,7 +21,7 @@
     fd
     jq
     xdg-utils
-    polkit-gnome
+    polkit_gnome
 
     #visualisation
     htop
