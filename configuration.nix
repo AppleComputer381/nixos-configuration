@@ -2,25 +2,10 @@
 
 {
   imports = [
-    ./modules/boot/boot.nix
-    ./hardware-configuration.nix
-    ./modules/users.nix
-    ./modules/desktop.nix
-    ./modules/networking.nix
-    ./modules/packages.nix
-    ./modules/shell/shell.nix
-    ./modules/lock.nix
+    ./hosts/laptop/hardware-configuration.nix
+    ./modules/home/default.nix
+    ./modules/core/default.nix
   ];
 
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.systemd-boot.configurationLimit = 5; 
-  boot.loader.systemd-boot.consoleMode = "max";    
-  boot.plymouth = {
-    enable = true;
-    theme = "breeze"; # Un thème propre et simple
-  };  
-  # Pour détecter Windows (si tu es en EFI)
-  boot.loader.grub.useOSProber = true;
-  system.stateVersion = "26.05";
+
 }

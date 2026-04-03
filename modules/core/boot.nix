@@ -11,4 +11,5 @@ boot.loader.systemd-boot.enable = true;
   };  
   # Pour détecter Windows (si tu es en EFI)
   boot.loader.grub.useOSProber = true;
-  system.stateVersion = "26.05";
+
+}

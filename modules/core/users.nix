@@ -1,9 +1,10 @@
 {config, pkgs, ...}: 
 
 {
-    users.users.monuser = {
+    users.users.emilienb = {
         isNormalUser = true;
-        extraGroups = [ "wheel"
+        extraGroups = [ 
+        "wheel"
         "networkmanager"
         "audio"
         "video"
@@ -11,8 +12,7 @@
         "docker"
       ];
 
-         
-    
-        
+      shell = pkgs.zsh;  
     };
+    nix.settings.trusted-users = ["root" "emilienb" ];
 }

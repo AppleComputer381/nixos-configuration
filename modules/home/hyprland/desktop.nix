@@ -1,7 +1,7 @@
 {config, pkgs, ...}: 
 
 {
-    import = [
+    imports = [
       ./packages.nix
     ];
     programs.hyprland = {
@@ -11,12 +11,14 @@
 
     environment.sessionVariables = {
      NIXOS_OZONE_WL = "1";
+     XCURSOR_THEME = "Bibata-Modern-Ice";
+	   XCURSOR_SIZE = "24";
     };
     programs.regreet = {
     enable = false;
     settings = {
       background = {
-        path = "/home/monuser/Images/wallpapers/wallpaper.jpg"; 
+        path = "./config/wallpapers/wallpaper.jpg"; 
         fit = "Cover";
       };
       appearance = {
@@ -42,14 +44,15 @@
         pkgs.xdg-desktop-portal-gtk
       ];
     };
-    programs.regreet.settings.appearance.cursor_theme_name = "Bibata-modern-Ice";
-    environment.sessionVariables = {
-	  XCURSOR_THEME = "Bibata-Modern-Ice";
-	  XCURSOR_SIWE = "24";
-    };
+    programs.regreet.settings.appearance.cursor_theme_name = "Bibata-Modern-Ice";
+
     qt.enable = true;
     qt.platformTheme = "gtk2";
     qt.style = "gtk2";
 
-    
-    home.file.".config/hypr/hyprland.conf".source = ./config/hyprland.conf;
+    # Symlink automatique de hyprland.conf vers ~/.config/hypr/
+    systemd.tmpfiles.rules = [
+      "d /home/emilienb/.config/hypr 0755 emilienb users -"
+      "L+ /home/emilienb/.config/hypr/hyprland.conf - - - - ${./config/hyprland.conf}"
+    ];
+}
