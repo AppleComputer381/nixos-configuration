@@ -55,5 +55,9 @@
 	mkdir -p /home/emilienb/.config/hypr
 	cp ${./config/hyprland.conf} /home/emilienb/.config/hypr/hyprland.conf
 	chown emilienb:users /home/emilienb/.config/hypr/hyprland.conf
+	
+	mkdir -p /home/monuser/.config/rofi
+      	ln -sfn /etc/nixos/modules/rofi/config.rasi /home/monuser/.config/rofi/config.rasi
+      	chown -R monuser:users /home/monuser/.config/rofi
 	'';
 }

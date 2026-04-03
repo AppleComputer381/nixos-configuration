@@ -36,15 +36,19 @@
     unrar
     p7zip
     
+    #ai
+    gemini-cli
 
-
+    #cloud
+    google-cloud-sdk
     
     #commadlines
     kubectl
     kubernetes-helm
     docker
     docker-compose
-
+    terraform
+    terraform-docs
     
   ];    
 }

@@ -1,18 +1,22 @@
 {config, pkgs, ...}: 
 
-{
-   
 
+let
+	web-search = pkgs.writeShellScriptBin "web-search" (builtins.readFile ../scripts/web-search.sh);
+in   
+{
 environment.systemPackages = with pkgs;
     [
+     hyprpaper
      kitty
      waybar
      dunst
      libnotify
      rofi
+     web-search
      swww
      networkmanagerapplet 
-
+     brightnessctl
      #dependances Hyprland
      grim
      slurp
