@@ -23,6 +23,7 @@
       slurp
       wl-clipboard
       github-cli
+      bibata-cursors
       #commadlines
       kubectl
       kubernetes-helm
