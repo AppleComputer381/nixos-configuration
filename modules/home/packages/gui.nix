@@ -23,6 +23,6 @@
 
         #editeur de texte
         sublime4
-
+	antigravity
     ];    
 }

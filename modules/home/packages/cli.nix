@@ -38,7 +38,7 @@
     
     #ai
     gemini-cli
-
+    translate-shell
     #cloud
     google-cloud-sdk
     

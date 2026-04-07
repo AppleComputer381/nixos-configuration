@@ -56,8 +56,15 @@
 	cp ${./config/hyprland.conf} /home/emilienb/.config/hypr/hyprland.conf
 	chown emilienb:users /home/emilienb/.config/hypr/hyprland.conf
 	
-	mkdir -p /home/monuser/.config/rofi
-      	ln -sfn /etc/nixos/modules/rofi/config.rasi /home/monuser/.config/rofi/config.rasi
-      	chown -R monuser:users /home/monuser/.config/rofi
+	#SymLink automatique de hyprland.conf vers ~/.config/rofi	
+	mkdir -p /home/emilienb/.config/rofi
+      	ln -sfn /etc/nixos/modules/rofi/config.rasi /home/emilienb/.config/rofi/config.rasi
+      	chown -R emilienb:users /home/emilienb/.config/rofi
+	
+	#Symlink automatique de la config waybar vers ~/.config/waybar
+	mkdir -p /home/emilienb/.config/waybar
+    	ln -sfn /etc/nixos/modules/home/hyperland/config/waybar/config.jsonc /home/emilienb/.config/waybar/config
+    	ln -sfn /etc/nixos/modules/home/hyperland/config/waybar/style.css /home/emilienb/.config/waybar/style.css
+    	chown -R emilienb:users /home/emilienb/.config/waybar
 	'';
 }

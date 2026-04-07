@@ -3,6 +3,8 @@
 
 let
 	web-search = pkgs.writeShellScriptBin "web-search" (builtins.readFile ../scripts/web-search.sh);
+	mytranslate  = pkgs.writeShellScriptBin "mytranslate" (builtins.readFile ../scripts/translate.sh);
+
 in   
 {
 environment.systemPackages = with pkgs;
@@ -14,6 +16,7 @@ environment.systemPackages = with pkgs;
      libnotify
      rofi
      web-search
+     mytranslate
      swww
      networkmanagerapplet 
      brightnessctl
